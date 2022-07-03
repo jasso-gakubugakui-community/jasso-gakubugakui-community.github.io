@@ -1,4 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -12,13 +15,13 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "",
-      "spaceId": ""
+      "accessToken": process.env.ACCESS_TOKEN,
+      "spaceId": process.env.SPACE_ID
     }
   }, "gatsby-plugin-postcss", {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
-      "trackingId": ""
+      "trackingId": process.env.TRACKING_ID
     }
   }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
