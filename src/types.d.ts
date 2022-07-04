@@ -4,7 +4,7 @@ export type SEOProps = {
     image?: string
     article?: boolean
     lang?: string
-    meta?: Meta
+    meta?: React.DetailedHTMLProps<React.MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>[]
 }
 
 export type SEOQuery = {
