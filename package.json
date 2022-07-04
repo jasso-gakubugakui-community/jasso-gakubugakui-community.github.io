@@ -17,6 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
     "@fontsource/noto-sans-jp": "^4.5.10",
     "@fontsource/roboto": "^4.5.7",
     "@material-ui/core": "^4.12.4",
