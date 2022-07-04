@@ -1187,6 +1187,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/noto-sans-jp@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans-jp/-/noto-sans-jp-4.5.10.tgz#48f7bc974e18e83d6dd9d25fc7c8abdcd81ea3a1"
+  integrity sha512-bRYEtITx5m/TxYMfeWupEpihJ98HeKEYeOYeP0hvWPbAlgxtnqBgbUPFPm0Aa0MZihFS/Fi+QYShhZorJLGBSQ==
+
+"@fontsource/roboto@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.7.tgz#292740a52fa2bac61b89f92e1c588037defe65cb"
+  integrity sha512-m57UMER23Mk6Drg9OjtHW1Y+0KPGyZfE5XJoPTOsLARLar6013kJj4X2HICt+iFLJqIgTahA/QAvSn9lwF1EEw==
+
 "@gatsbyjs/parcel-namer-relative-to-cwd@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/parcel-namer-relative-to-cwd/-/parcel-namer-relative-to-cwd-1.2.0.tgz#3ebc0e5bbe90e7a897d5427c2b67ffe26730228f"
