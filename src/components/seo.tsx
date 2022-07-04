@@ -16,6 +16,7 @@ const SEO = ({ title, description = "", image = "", lang = "ja", meta = [] }: SE
     siteUrl,
     image: defaultImage,
     twitterUsername,
+    lang: defaultLang,
   } = site.siteMetadata
 
   const seo = {
@@ -23,56 +24,55 @@ const SEO = ({ title, description = "", image = "", lang = "ja", meta = [] }: SE
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
-    twitterUsername
+    twitterUsername,
+    lang: lang || defaultLang
   }
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate} meta={[
-      {
-        name: `description`,
-        content: `${seo.description}`,
-      },
-      {
-        name: `twitter:card`,
-        content: `summary`,
-      },
-      {
-        name: `twitter:creator`,
-        content: seo.twitterUsername,
-      },
-      {
-        property: `og:image`,
-        content: `${siteUrl}/logo.png`,
-      },
-      {
-        property: `og:title`,
-        content: seo.title,
-      },
-      {
-        property: `og:description`,
-        content: seo.description,
-      },
-      {
-        property: `og:type`,
-        content: `website`,
-      },
-      {
-        name: `thumbnail`,
-        content: `${siteUrl}/logo.png`,
-      },
-      {
-        name: `twitter:title`,
-        content: title,
-      },
-      {
-        name: `twitter:description`,
-        content: seo.description,
-      },
-      {
-        property: `og:type`,
-        content: `website`,
-      },
-    ].concat(meta)} />
+    <Helmet htmlAttributes={{ lang: seo.lang }} title={seo.title} titleTemplate={titleTemplate} meta={
+      [
+        {
+          name: `description`,
+          content: `${seo.description}`,
+        },
+        {
+          property: `og:title`,
+          content: seo.title,
+        },
+        {
+          property: `og:image`,
+          content: seo.image,
+        },
+        {
+          property: `og:description`,
+          content: seo.description,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: seo.description,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: seo.twitterUsername,
+        },
+        {
+          name: `twitter:image`,
+          content: seo.image
+        },
+      ].concat(meta)
+    } />
   )
 }
 
@@ -88,6 +88,7 @@ const query = graphql`
         siteUrl: url
         defaultImage: image
         twitterUsername
+        lang
       }
     }
   }
