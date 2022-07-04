@@ -11,7 +11,8 @@ const config: GatsbyConfig = {
     description: "JASSO海外学部学位取得型奨学生コミュニティウェブサイト",
     image: "/logo_v1.png",
     twitterUsername: "@JASSO_UGGroup",
-    lang: "ja"
+    lang: "ja",
+    email: "jasso.gakubugakui.community@gmail.com"
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
