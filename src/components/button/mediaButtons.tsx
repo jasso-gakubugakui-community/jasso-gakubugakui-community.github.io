@@ -24,7 +24,7 @@ export const MediaButtons = () => {
 
         const mail_link: string = `mailto:${site.siteMetadata.email}`
         return (
-            <IconButton aria-label="email link" href={mail_link}>
+            <IconButton aria-label="email link" href={mail_link} >
                 <Email />
             </IconButton>
         )
@@ -33,7 +33,7 @@ export const MediaButtons = () => {
     const TwitterButton = () => {
         const twitter_link: string = `https://twitter.com/${site.siteMetadata.twitterUsername.slice(1)}`
         return (
-            <IconButton aria-label="twitter link" href={twitter_link}>
+            <IconButton aria-label="twitter link" href={twitter_link} target='_blank' rel="noreferrer">
                 <Twitter />
             </IconButton>
         )
