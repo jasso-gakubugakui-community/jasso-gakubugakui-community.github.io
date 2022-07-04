@@ -47,7 +47,8 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  }]
+  },
+    `gatsby-plugin-material-ui`,]
 };
 
 export default config;
