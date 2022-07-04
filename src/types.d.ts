@@ -3,7 +3,7 @@ export type SEOProps = {
     description?: string
     image?: string
     lang?: string
-    meta?: React.DetailedHTMLProps<React.MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>[]
+    meta?: ({ name: string; content: string; property?: undefined; } | { property: string; content: string; name?: undefined; })[]
 }
 
 export type SEOQuery = {
