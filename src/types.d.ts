@@ -6,3 +6,16 @@ export type SEOProps = {
     lang?: string
     meta?: Meta
 }
+
+export type SEOQuery = {
+    site: {
+        siteMetadata: {
+            title: string
+            titleTemplate: string
+            siteUrl: string
+            description: string
+            image: string
+            twitterUsername: string
+        }
+    }
+}
