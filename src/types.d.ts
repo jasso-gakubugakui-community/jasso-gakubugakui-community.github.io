@@ -2,7 +2,6 @@ export type SEOProps = {
     title: string
     description?: string
     image?: string
-    article?: boolean
     lang?: string
     meta?: React.DetailedHTMLProps<React.MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>[]
 }
