@@ -15,6 +15,7 @@ export type SEOQuery = {
             description: string
             image: string
             twitterUsername: string
+            lang: string
         }
     }
 }
