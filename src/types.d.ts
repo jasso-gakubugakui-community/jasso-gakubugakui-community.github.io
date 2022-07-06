@@ -19,3 +19,13 @@ export type SEOQuery = {
         }
     }
 }
+export type PageMenuItem = {
+    name: string
+    href: string
+}
+
+export type Page = {
+    name: string
+    href: string
+    menueItems: PageMenuItem[]
+}
