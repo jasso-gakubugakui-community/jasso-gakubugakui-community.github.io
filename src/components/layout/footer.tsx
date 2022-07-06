@@ -13,9 +13,9 @@ export const Footer = () => {
 
     return (
         <Container maxWidth='lg'>
-            <Toolbar disableGutters>
-                <Box flexGrow={1}>
-                    <Typography>
+            <Toolbar disableGutters >
+                <Box flexGrow={1} >
+                    <Typography >
                         Copyright © {copyrightYears} JASSO学部学位取得型奨学生コミュニティ | All Rights Reserved
                     </Typography>
                 </Box>
