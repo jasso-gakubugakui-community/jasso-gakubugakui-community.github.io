@@ -1,12 +1,12 @@
 import React from "react";
 
-import { Box, IconButton } from "@material-ui/core";
+import { Box, BoxProps, IconButton } from "@material-ui/core";
 import { Email, Twitter } from "@material-ui/icons";
 import { graphql, useStaticQuery } from "gatsby";
 
 
 
-export const MediaButtons = () => {
+export const MediaButtons = (props: { sx?: BoxProps }) => {
 
     const { site } = useStaticQuery<MediaQuery>(
         graphql`
@@ -38,6 +38,6 @@ export const MediaButtons = () => {
             </IconButton>
         )
     };
-    return (<Box><EmailButton /><TwitterButton /></Box>)
+    return (<Box sx={props.sx}><EmailButton /><TwitterButton /></Box>)
 }
 
