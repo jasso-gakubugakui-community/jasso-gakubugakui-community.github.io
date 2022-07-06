@@ -24,7 +24,7 @@ export type PageMenuItem = {
     href: string
 }
 
-export type Page = {
+export type PageItem = {
     name: string
     href: string
     menueItems: PageMenuItem[]
