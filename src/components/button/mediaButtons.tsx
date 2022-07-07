@@ -1,9 +1,10 @@
 import React from "react";
 
-import { Box, BoxProps, Button, IconButton } from "@mui/material";
+import { Box, SxProps, Button, IconButton } from "@mui/material";
 import { Email, Twitter } from "@mui/icons-material";
 import { graphql, useStaticQuery } from "gatsby";
 
+import { NavStack } from "../stack/navStack";
 
 export const JoinCommunityButton = () => {
     return (
@@ -16,7 +17,7 @@ export const JoinCommunityButton = () => {
     )
 }
 
-export const MediaButtons = (props: { sx?: BoxProps }) => {
+export const MediaButtons = (props: { sx?: SxProps }) => {
 
     const { site } = useStaticQuery<MediaQuery>(
         graphql`
@@ -48,6 +49,6 @@ export const MediaButtons = (props: { sx?: BoxProps }) => {
             </IconButton>
         )
     };
-    return (<Box sx={props.sx}><EmailButton /><TwitterButton /><JoinCommunityButton /></Box>)
+    return (<NavStack sx={props.sx}><EmailButton /><TwitterButton /></NavStack>)
 }
 

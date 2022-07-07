@@ -1,9 +1,10 @@
 import React from "react";
 
-import { AppBar, Toolbar, Container, Typography, Box, Button, IconButton, Menu, MenuItem } from "@mui/material";
+import { AppBar, Toolbar, Container, Typography, Box, Button, IconButton, Menu, MenuItem, Stack } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material"
 
 import { JoinCommunityButton } from "../button/mediaButtons";
+import { NavStack } from "../stack/navStack";
 import { PageItem } from "../../types";
 
 const pages: PageItem[] = [{ name: 'About', href: "/about" }, { name: 'Community Guideline', href: "/community-guideline" }]
@@ -28,14 +29,14 @@ export const Header = () => {
                             JASSO学部学位取得型奨学生コミュニティ
                         </Button>
                     </Box>
-                    <Box flexGrow={0} sx={{ display: { xs: 'none', md: 'flex' } }}>
+                    <NavStack sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {pages.map(page => (
                             <Button href={page.href} style={{ textTransform: 'none' }} color='inherit'>
                                 {page.name}
                             </Button>
                         ))}
                         <JoinCommunityButton />
-                    </Box>
+                    </NavStack>
                     <Box flexGrow={0} sx={{ display: { xs: 'block', md: 'none' } }}>
                         <IconButton
                             aria-label="menu app"
