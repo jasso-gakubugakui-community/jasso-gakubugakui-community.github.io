@@ -3,6 +3,7 @@ import React from "react";
 import { AppBar, Toolbar, Container, Typography, Box, Button, IconButton, Menu, MenuItem } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material"
 
+import { JoinCommunityButton } from "../button/mediaButtons";
 import { PageItem } from "../../types";
 
 const pages: PageItem[] = [{ name: 'About', href: "/about" }, { name: 'Community Guideline', href: "/community-guideline" }]
@@ -33,6 +34,7 @@ export const Header = () => {
                                 {page.name}
                             </Button>
                         ))}
+                        <JoinCommunityButton />
                     </Box>
                     <Box flexGrow={0} sx={{ display: { xs: 'block', md: 'none' } }}>
                         <IconButton

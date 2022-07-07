@@ -1,10 +1,20 @@
 import React from "react";
 
-import { Box, BoxProps, IconButton } from "@mui/material";
+import { Box, BoxProps, Button, IconButton } from "@mui/material";
 import { Email, Twitter } from "@mui/icons-material";
 import { graphql, useStaticQuery } from "gatsby";
 
 
+export const JoinCommunityButton = () => {
+    return (
+        <Button href="https://docs.google.com/forms/d/e/1FAIpQLSdneBto7JTJXgOEHn5e9xf4zNjQL3m_gdPcsIHJ-br_QJdjcw/viewform"
+            variant="contained"
+            target='_blank'
+            rel="noreferrer">
+            Join the Community
+        </Button>
+    )
+}
 
 export const MediaButtons = (props: { sx?: BoxProps }) => {
 
@@ -38,6 +48,6 @@ export const MediaButtons = (props: { sx?: BoxProps }) => {
             </IconButton>
         )
     };
-    return (<Box sx={props.sx}><EmailButton /><TwitterButton /></Box>)
+    return (<Box sx={props.sx}><EmailButton /><TwitterButton /><JoinCommunityButton /></Box>)
 }
 

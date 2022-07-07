@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Box, Typography, Toolbar } from "@mui/material";
 import { grey } from "@mui/material/colors";
 
-import { MediaButtons } from "../button/mediaButtons";
+import { MediaButtons, JoinCommunityButton } from "../button/mediaButtons";
 
 export const Footer = () => {
 
