@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Box, BoxProps, IconButton } from "@material-ui/core";
-import { Email, Twitter } from "@material-ui/icons";
+import { Box, BoxProps, IconButton } from "@mui/material";
+import { Email, Twitter } from "@mui/icons-material";
 import { graphql, useStaticQuery } from "gatsby";
 
 

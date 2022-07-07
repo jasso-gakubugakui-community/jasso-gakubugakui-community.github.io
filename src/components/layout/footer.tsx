@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Container, Typography, Toolbar } from "@material-ui/core";
+import { Container, Box, Typography, Toolbar } from "@mui/material";
 
 import { MediaButtons } from "../button/mediaButtons";
 
