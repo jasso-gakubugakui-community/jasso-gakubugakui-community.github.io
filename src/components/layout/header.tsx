@@ -33,13 +33,13 @@ export const Header = () => {
             <Container maxWidth='lg'>
                 <Toolbar disableGutters>
                     <Box flexGrow={1}>
-                        <Button href="/" style={{ textTransform: 'none' }}>
+                        <Button href="/" style={{ textTransform: 'none' }} color='inherit'>
                             JASSO学部学位取得型奨学生コミュニティ
                         </Button>
                     </Box>
                     <Box flexGrow={0} sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {pages.map(page => (
-                            <Button href={page.href} style={{ textTransform: 'none' }}>
+                            <Button href={page.href} style={{ textTransform: 'none' }} color='inherit'>
                                 {page.name}
                             </Button>
                         ))}
