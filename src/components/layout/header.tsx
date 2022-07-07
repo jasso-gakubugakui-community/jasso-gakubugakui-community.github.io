@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AppBar, Toolbar, Container, Typography, Box, Button, IconButton, Menu, MenuItem, Stack } from "@mui/material";
+import { AppBar, Toolbar, Container, Typography, Box, Button, IconButton, Menu, MenuItem, Stack, Divider } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material"
 
 import { JoinCommunityButton } from "../button/mediaButtons";
@@ -65,10 +65,16 @@ export const Header = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                <MenuItem key={page.name} href={page.href} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">{page.name}</Typography>
                                 </MenuItem>
                             ))}
+                            <Divider />
+                            <MenuItem key="Join Community" onClick={handleCloseNavMenu}>
+                                <Typography textAlign='center'>
+                                    Join the Community
+                                </Typography>
+                            </MenuItem>
                         </Menu>
                     </Box>
                 </Toolbar>
