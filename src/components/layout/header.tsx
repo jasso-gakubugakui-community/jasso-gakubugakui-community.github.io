@@ -1,7 +1,7 @@
 import React from "react";
 
-import { AppBar, Toolbar, Container, Typography, Box, useTheme, Button, IconButton, Drawer, List, ListItem, Divider, ListItemButton, ListItemText, Menu, MenuItem } from "@mui/material";
-import { Menu as MenuIcon, ChevronLeft } from "@mui/icons-material"
+import { AppBar, Toolbar, Container, Typography, Box, Button, IconButton, Menu, MenuItem } from "@mui/material";
+import { Menu as MenuIcon } from "@mui/icons-material"
 
 import { PageItem } from "../../types";
 
@@ -9,24 +9,14 @@ const pages: PageItem[] = [{ name: 'About', href: "/about" }, { name: 'Community
 
 export const Header = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-    const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElUser(event.currentTarget);
     };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
-
-
 
     return (
         <AppBar position="sticky" color="transparent">
