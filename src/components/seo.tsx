@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { SEOProps, SEOQuery } from '../types'
 
-const SEO = ({ title, description = "", image = "", lang = "ja", meta = [] }: SEOProps) => {
+export const SEO = ({ title, description = "", image = "", lang = "ja", meta = [] }: SEOProps) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery<SEOQuery>(query)
 
@@ -75,8 +75,6 @@ const SEO = ({ title, description = "", image = "", lang = "ja", meta = [] }: SE
     } />
   )
 }
-
-export default SEO
 
 const query = graphql`
   query SEO {
