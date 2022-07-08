@@ -15,10 +15,14 @@ export const Footer = () => {
     return (
         <Paper sx={{ bgcolor: grey[100] }} elevation={0}>
             <Container maxWidth='lg' >
-                <Toolbar disableGutters >
-                    <JoinCommunityButton />
+                <Toolbar disableGutters>
+                    <Box mt={4}>
+                        <JoinCommunityButton />
+                    </Box>
                 </Toolbar>
-                <Divider />
+                <Box mt={4} mb={2}>
+                    <Divider />
+                </Box>
                 <Toolbar disableGutters >
                     <Box flexGrow={1}>
                         <Typography >
