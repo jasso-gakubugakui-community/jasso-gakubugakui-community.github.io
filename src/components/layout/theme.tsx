@@ -16,8 +16,7 @@ export const MuiThemeProvider = (props: { children: React.ReactNode }) => {
         },
         typography: {
             fontFamily: [
-                '"Noto Sans JP"',
-                'Roboto',
+                'Noto Sans JP',
                 'sans-serif',
             ].join(',')
         },
