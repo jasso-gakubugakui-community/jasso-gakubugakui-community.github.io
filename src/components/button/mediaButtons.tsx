@@ -19,17 +19,7 @@ export const JoinCommunityButton = () => {
 
 export const MediaButtons = (props: { sx?: SxProps }) => {
 
-    const { site } = useStaticQuery<MediaQuery>(
-        graphql`
-            query Media {
-                site {
-                    siteMetadata {
-                        twitterUsername
-                        email
-                    }
-                }
-            }
-            `);
+    const { site } = useStaticQuery<MediaQuery>(query);
 
     const EmailButton = () => {
 
@@ -52,3 +42,13 @@ export const MediaButtons = (props: { sx?: SxProps }) => {
     return (<NavStack sx={props.sx}><EmailButton /><TwitterButton /></NavStack>)
 }
 
+const query = graphql`
+query Media {
+    site {
+        siteMetadata {
+            twitterUsername
+            email
+        }
+    }
+}
+`;
