@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AppBar, Toolbar, Container, Typography, Box, Button, IconButton, Menu, MenuItem, Stack, Divider } from "@mui/material";
+import { AppBar, Toolbar, Container, Typography, Box, Button, IconButton, Menu, MenuItem, Stack, Divider, Link } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material"
 
 import { JoinCommunityButton } from "../button/mediaButtons";
@@ -65,15 +65,20 @@ export const Header = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page.name} href={page.href} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page.name}</Typography>
+                                <MenuItem key={page.name} href={page.href} >
+                                    <Link href={page.href} underline="none" color='inherit'>
+                                        <Typography textAlign="center">{page.name}</Typography>
+                                    </Link>
+
                                 </MenuItem>
                             ))}
                             <Divider />
-                            <MenuItem key="Join Community" onClick={handleCloseNavMenu}>
-                                <Typography textAlign='center'>
-                                    Join the Community
-                                </Typography>
+                            <MenuItem key="Join Community">
+                                <Link href='/community' underline="none" color='inherit'>
+                                    <Typography textAlign='center'>
+                                        Join the Community
+                                    </Typography>
+                                </Link>
                             </MenuItem>
                         </Menu>
                     </Box>
