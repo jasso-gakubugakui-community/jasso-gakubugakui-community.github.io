@@ -12,6 +12,6 @@ export const Paragraph = (props: { children: React.ReactNode }) => {
 
 export const PageSectionHeader = (props: { children: React.ReactNode }) => {
     return (
-        <Typography variant="h4" gutterBottom color='primary' fontWeight="bold">{props.children}</Typography>
+        <Typography variant="h4" gutterBottom color='primary' fontWeight="bold" mt={4}>{props.children}</Typography>
     )
 }

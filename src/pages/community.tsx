@@ -7,6 +7,7 @@ import { Layout } from "../components/layout/layout"
 import { SEO } from "../components/seo";
 import { Paragraph, PageSectionHeader } from "../components/layout/paragraph";
 import { PageNav } from "../components/navigation/pageNav";
+import { RegistrationButton } from "../components/button/mediaButtons";
 
 
 const CommunityPage = () => {
@@ -34,6 +35,7 @@ const CommunityPage = () => {
                         </ul>
                         をオンラインで繋ぐSlackコミュニティです。2022年8月に運営を開始しました。
                     </Paragraph>
+                    <RegistrationButton />
                     <PageSectionHeader>参加資格</PageSectionHeader>
                     <Paragraph>
                         当コミュニティはソーシャルメディア的な側面もあるため、参加者の保護、トラブル防止などの観点から、以下の5点を満たす方のみの登録を受け付けています。
@@ -46,7 +48,7 @@ const CommunityPage = () => {
                         </ol>
                         以上を全て満たし、JASSO海外学部学位取得型奨学生 Slack Workplaceへの参加をご希望される方は以下のボタンからフォームへのご記入をお願いします。登録していただいたメールアドレスにコミュニティから招待メールを送らせていただきます。ご不明な点がありましたら、メールにて遠慮なくお問い合わせください。奨学生の皆様のご参加をお待ちしております。
                     </Paragraph>
-
+                    <RegistrationButton />
                     <PageSectionHeader>Community Guideline</PageSectionHeader>
                     <Paragraph>
                         JASSO学部学位取得型奨学生コミュニティは、2022年に有志のJASSO学部学位取得型支援制度の奨学生達によってスタートした、現奨学生及び卒業生の縦横の繋がりを作るためのコミュニティです。

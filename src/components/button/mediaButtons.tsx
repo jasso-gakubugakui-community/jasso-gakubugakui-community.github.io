@@ -15,6 +15,19 @@ export const JoinCommunityButton = () => {
     )
 }
 
+export const RegistrationButton = () => {
+    return (
+        <Button variant="contained"
+            color="secondary"
+            target='_blank'
+            rel="noreferrer"
+            href="https://forms.gle/ycm4NuZNDMgGQP9v9"
+            style={{ textTransform: 'none' }} >
+            <b>Googleフォームに記入して参加する</b>
+        </Button>
+    )
+}
+
 export const MediaButtons = (props: { sx?: SxProps }) => {
 
     const { site } = useStaticQuery<MediaQuery>(query);
