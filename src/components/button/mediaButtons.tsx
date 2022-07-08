@@ -65,7 +65,7 @@ export const FollowUsOnTwitterButton = () => {
     const twitter_link: string = `https://twitter.com/${site.siteMetadata.twitterUsername.slice(1)}`
     return (
         <ContactButton href={twitter_link}>
-            Follw Us on Twitter
+            Follw us on Twitter
         </ContactButton>
     )
 }
