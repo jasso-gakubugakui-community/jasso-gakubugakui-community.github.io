@@ -5,7 +5,7 @@ import { Box } from "@mui/system";
 
 import { Layout } from "../components/layout/layout"
 import { SEO } from "../components/seo";
-import { Paragraph } from "../components/layout/paragraph";
+import { Paragraph, PageSectionHeader } from "../components/layout/paragraph";
 import { PageNav } from "../components/navigation/pageNav";
 
 
@@ -19,7 +19,35 @@ const CommunityPage = () => {
             <Container maxWidth='lg' sx={{ marginBottom: 2 }}>
                 <PageNav pageName="Community" />
                 <Box>
-                    <Typography variant="h4" gutterBottom>Community Guideline</Typography>
+                    <PageSectionHeader>JASSO海外学部学位取得型奨学生 Slack とは？</PageSectionHeader>
+                    <Paragraph>
+                        <ul>
+                            <li>
+                                <b>これから留学する奨学生</b>
+                            </li>
+                            <li>
+                                <b>現在留学している奨学生</b>
+                            </li>
+                            <li>
+                                <b>留学を終えた奨学生</b>
+                            </li>
+                        </ul>
+                        をオンラインで繋ぐSlackコミュニティです。2022年8月に運営を開始しました。
+                    </Paragraph>
+                    <PageSectionHeader>参加資格</PageSectionHeader>
+                    <Paragraph>
+                        当コミュニティはソーシャルメディア的な側面もあるため、参加者の保護、トラブル防止などの観点から、以下の5点を満たす方のみの登録を受け付けています。
+                        <ol>
+                            <li>JASSO海外学部学位取得型支援制度の奨学生である、もしくは奨学生であった。</li>
+                            <li>実名かつフルネームでの登録が可能である。</li>
+                            <li>コミュニティ内で得た個人情報が含まれるものを、不特定多数の第三者にアクセスできる形で共有、拡散しないことに同意できる。</li>
+                            <li>特定の社会的属性に基づく差別的言動・各種ハラスメント行為を行わないことに同意できる。</li>
+                            <li>その他、下記コミュニティガイドラインの内容に同意できる。</li>
+                        </ol>
+                        以上を全て満たし、JASSO海外学部学位取得型奨学生 Slack Workplaceへの参加をご希望される方は以下のボタンからフォームへのご記入をお願いします。登録していただいたメールアドレスにコミュニティから招待メールを送らせていただきます。ご不明な点がありましたら、メールにて遠慮なくお問い合わせください。奨学生の皆様のご参加をお待ちしております。
+                    </Paragraph>
+
+                    <PageSectionHeader>Community Guideline</PageSectionHeader>
                     <Paragraph>
                         JASSO学部学位取得型奨学生コミュニティは、2022年に有志のJASSO学部学位取得型支援制度の奨学生達によってスタートした、現奨学生及び卒業生の縦横の繋がりを作るためのコミュニティです。
                     </Paragraph>

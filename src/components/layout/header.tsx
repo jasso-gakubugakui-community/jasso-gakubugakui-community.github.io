@@ -21,7 +21,7 @@ export const Header = () => {
     };
 
     return (
-        <AppBar position="sticky" color="transparent">
+        <AppBar position="sticky" color="transparent" sx={{ backdropFilter: "blur(20px)" }}>
             <Container maxWidth='lg'>
                 <Toolbar disableGutters>
                     <Box flexGrow={1}>
