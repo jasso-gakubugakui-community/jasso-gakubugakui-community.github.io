@@ -8,10 +8,8 @@ import { NavStack } from "../stack/navStack";
 
 export const JoinCommunityButton = () => {
     return (
-        <Button href="https://docs.google.com/forms/d/e/1FAIpQLSdneBto7JTJXgOEHn5e9xf4zNjQL3m_gdPcsIHJ-br_QJdjcw/viewform"
-            variant="contained"
-            target='_blank'
-            rel="noreferrer">
+        <Button href="/community"
+            variant="contained">
             Join the Community
         </Button>
     )

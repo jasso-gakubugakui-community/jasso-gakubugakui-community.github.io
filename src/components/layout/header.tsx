@@ -7,7 +7,7 @@ import { JoinCommunityButton } from "../button/mediaButtons";
 import { NavStack } from "../stack/navStack";
 import { PageItem } from "../../types";
 
-const pages: PageItem[] = [{ name: 'About', href: "/about" }, { name: 'Community Guideline', href: "/community-guideline" }]
+const pages: PageItem[] = [{ name: 'About', href: "/about" }]
 
 export const Header = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
