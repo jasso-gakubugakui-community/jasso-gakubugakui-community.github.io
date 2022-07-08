@@ -3,10 +3,10 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { SEOProps, SEOQuery } from '../types'
+import { SEOQuery } from '../types'
 
 export const SEO = (props: {
-  title?: string, description?: string, image?: string, lang?: string, meta?: []
+  title?: string, description?: string, image?: string, lang: string, meta: []
 }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery<SEOQuery>(query)
@@ -76,6 +76,11 @@ export const SEO = (props: {
       ].concat(props.meta!)
     } />
   )
+}
+
+SEO.defaultProps = {
+  lang: "ja",
+  meta: []
 }
 
 const query = graphql`

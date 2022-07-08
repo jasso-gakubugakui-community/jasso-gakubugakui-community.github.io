@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Layout } from "../components/layout/layout"
+import { SEO } from "../components/seo"
 
 // styles
 
@@ -8,6 +9,7 @@ import { Layout } from "../components/layout/layout"
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO />
     </Layout>
   )
 }
