@@ -5,7 +5,7 @@ import { Box } from "@mui/system";
 
 import { Layout } from "../components/layout/layout"
 import { SEO } from "../components/seo";
-import { Paragraph } from "../components/layout/paragraph";
+import { Paragraph, PageSectionHeader } from "../components/layout/paragraph";
 import { ContactUsButton, FollowUsOnTwitterButton } from "../components/button/mediaButtons";
 import { PageNav } from "../components/navigation/pageNav";
 
@@ -20,7 +20,7 @@ const AboutPage = () => {
             <Container maxWidth='lg' sx={{ marginBottom: 2 }}>
                 <PageNav pageName="About" />
                 <Box>
-                    <Typography variant="h4" gutterBottom>About</Typography>
+                    <PageSectionHeader>About</PageSectionHeader>
                     <Paragraph>
                         JASSO学部学位取得型奨学生コミュニティは、2022年に有志のJASSO学部学位取得型支援制度の奨学生達によってスタートした、現奨学生及び卒業生の縦横の繋がりを作るためのコミュニティです。
                     </Paragraph>
