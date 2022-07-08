@@ -5,7 +5,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { SEOProps, SEOQuery } from '../types'
 
-export const SEO = ({ title, description = "", image = "", lang = "ja", meta = [] }: SEOProps) => {
+export const SEO = (props: {
+  title?: string, description?: string, image?: string, lang?: string, meta?: []
+}) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery<SEOQuery>(query)
 
@@ -20,12 +22,12 @@ export const SEO = ({ title, description = "", image = "", lang = "ja", meta = [
   } = site.siteMetadata
 
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    title: props.title || defaultTitle,
+    description: props.description || defaultDescription,
+    image: `${siteUrl}${props.image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
     twitterUsername,
-    lang: lang || defaultLang
+    lang: props.lang || defaultLang
   }
 
   return (
@@ -53,7 +55,7 @@ export const SEO = ({ title, description = "", image = "", lang = "ja", meta = [
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: seo.title,
         },
         {
           name: `twitter:description`,
@@ -71,7 +73,7 @@ export const SEO = ({ title, description = "", image = "", lang = "ja", meta = [
           name: `twitter:image`,
           content: seo.image
         },
-      ].concat(meta)
+      ].concat(props.meta!)
     } />
   )
 }
