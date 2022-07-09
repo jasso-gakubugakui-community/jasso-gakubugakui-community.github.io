@@ -75,7 +75,6 @@ export const Header = () => {
 
                                 </MenuItem>
                             ))}
-                            <Divider />
                             <MenuItem key="Join Community">
                                 <Link href='/community' underline="none" color='inherit'>
                                     <Typography textAlign='center'>
