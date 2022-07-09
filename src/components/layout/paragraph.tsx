@@ -10,7 +10,7 @@ export const Paragraph = (props: { children: React.ReactNode }) => {
     )
 }
 
-export const PageSectionHeading = (props: { children: React.ReactNode }) => {
+export const SectionHeading = (props: { children: React.ReactNode }) => {
     return (
         <Box>
             <Typography variant="h4"
@@ -33,7 +33,7 @@ export const PageSectionHeading = (props: { children: React.ReactNode }) => {
     )
 }
 
-export const PageSubsectionHeading = (props: { children: React.ReactNode }) => {
+export const SubsectionHeading = (props: { children: React.ReactNode }) => {
     return (
         <Box>
             <Typography variant="h5"
