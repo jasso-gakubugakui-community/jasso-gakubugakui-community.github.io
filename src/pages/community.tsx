@@ -104,9 +104,28 @@ const CommunityPage = () => {
                     <P>
                         ガイドライン及びプライバシーポリシーは「# general-コミュニティガイドライン」に固定投稿され、それに関する意見や議論もそのチャンネルで行うようにします。
                     </P>
+                    <SectionHeading>Privacy Policy</SectionHeading>
+                    <P>
+                        JASSO学部学位コミュニティ（以下，「当団体」といいます。）は，本ウェブサイト上で提供するサービス（以下,「本サービス」といいます。）における，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
+                    </P>
+                    <SubsectionHeading>1. 個人情報</SubsectionHeading>
+                    <SubsectionHeading>2. 個人情報の収集方法</SubsectionHeading>
+                    <SubsectionHeading>3. 個人情報を収集・利用する目的</SubsectionHeading>
+                    <SubsectionHeading>4. 利用目的の変更</SubsectionHeading>
+                    <SubsectionHeading>5. 個人情報の第三者提供</SubsectionHeading>
+                    <SubsectionHeading>6. 個人情報の開示</SubsectionHeading>
+                    <SubsectionHeading>7. 個人情報の訂正および削除</SubsectionHeading>
+                    <SubsectionHeading>8. 個人情報の利用停止等</SubsectionHeading>
+                    <SubsectionHeading>9. プライバシーポリシーの変更</SubsectionHeading>
+                    <SubsectionHeading>10. お問い合わせ窓口</SubsectionHeading>
+                    本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。
+                    <List>
+                        <ListItem>当団体名：JASSO学部学位コミュニティ</ListItem>
+                        <ListItem>担当部署：JASSO学部学位コミュニティ</ListItem>
+                        <ListItem>Eメールアドレス：jasso.gakubugakui.community__at__gmail.com</ListItem>
+                    </List>
                 </Box>
             </Container>
-
         </Layout>
     )
 }
