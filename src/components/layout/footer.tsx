@@ -15,7 +15,7 @@ export const Footer = () => {
     const copyrightYears: string = currentYear == websiteStartYear ? websiteStartYear.toString() : `${websiteStartYear} - ${currentYear}`
 
     return (
-        <Paper sx={{ bgcolor: grey[100] }} elevation={0}>
+        <Paper sx={{ bgcolor: grey[100], marginTop: 4 }} elevation={0} >
             <Container maxWidth='lg' >
                 <Toolbar disableGutters>
                     <Box mt={4}>
