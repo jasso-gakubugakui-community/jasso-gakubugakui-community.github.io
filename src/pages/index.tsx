@@ -57,7 +57,7 @@ const IndexPage = () => {
             が考えられています。
           </Paragraph>
           <Typography variant="h6" gutterBottom color='primary'>
-            2. 現派遣学生及び卒業生を繋ぐコミュニティ
+            2. 世代を超えて派遣学生同士を繋ぐオンラインコミュニティ
           </Typography>
           <Paragraph>
             2022年8月にはSlackワークスペースを立ち上げ、<b>オンラインコミュニティとしての役割</b>も始動しました。

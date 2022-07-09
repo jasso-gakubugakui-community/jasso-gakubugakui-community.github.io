@@ -20,7 +20,7 @@ const CommunityPage = () => {
             <Container maxWidth='lg' sx={{ marginBottom: 2 }}>
                 <PageNav pageName="Community" />
                 <Box>
-                    <PageSectionHeader>JASSO海外留学支援制度学部学位取得型 Slack とは？</PageSectionHeader>
+                    <PageSectionHeader>{site.siteMetadata.defaultTitle} Slack とは？</PageSectionHeader>
                     <Paragraph>
                         <ul>
                             <li>
