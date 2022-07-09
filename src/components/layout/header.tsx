@@ -8,7 +8,7 @@ import { NavStack } from "../stack/navStack";
 import { PageItem } from "../../types";
 import { graphql, useStaticQuery } from "gatsby";
 
-const pages: PageItem[] = [{ name: 'About', href: "/about" }]
+const pages: PageItem[] = [];// [{ name: 'About', href: "/about" }]
 
 export const Header = () => {
     const { site } = useStaticQuery<HeaderQuery>(query)
