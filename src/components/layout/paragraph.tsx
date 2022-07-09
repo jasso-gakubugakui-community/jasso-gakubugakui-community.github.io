@@ -15,3 +15,9 @@ export const PageSectionHeader = (props: { children: React.ReactNode }) => {
         <Typography variant="h4" gutterBottom color='primary' fontWeight="bold" mt={4}>{props.children}</Typography>
     )
 }
+
+export const PageSubsectionHeader = (props: { children: React.ReactNode }) => {
+    return (
+        <Typography variant="h6" gutterBottom color='primary' fontWeight="bold" mt={4}>{props.children}</Typography>
+    )
+}
