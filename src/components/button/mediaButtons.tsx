@@ -68,7 +68,7 @@ export const ContactUsButton = () => {
 
     return (
         <ContactButton href={mail_link}>
-            Contact Us
+            Contact us
         </ContactButton>
     )
 }
