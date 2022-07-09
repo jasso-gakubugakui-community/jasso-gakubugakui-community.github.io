@@ -20,18 +20,27 @@ const IndexPage = () => {
       <SEO />
       <Container maxWidth='lg'>
         <Box my={4}>
-          <Grid container>
-            <Grid item xs={6}>
-              <Typography variant="h3">
-                過去・現在・未来の<br />
-                派遣学生が繋がる<br />
-                コミュニティ
-              </Typography>
-            </Grid>
-            <Grid item xs={6}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }} >
+            <Grid container>
+              <Grid item md={6}>
+                <Typography variant="h3">
+                  過去・現在・未来の<br />
+                  派遣学生が繋がる<br />
+                  コミュニティ
+                </Typography>
+              </Grid>
+              <Grid item md={6}>
 
+              </Grid>
             </Grid>
-          </Grid>
+          </Box>
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <Typography variant="h4">
+              過去・現在・未来の<br />
+              派遣学生が繋がる<br />
+              コミュニティ
+            </Typography>
+          </Box>
         </Box>
         <Box>
           <PageSectionHeader>About</PageSectionHeader>
