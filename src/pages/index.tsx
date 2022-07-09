@@ -23,7 +23,7 @@ const IndexPage = () => {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }} >
             <Grid container>
               <Grid item md={8}>
-                <Typography variant="h3">
+                <Typography variant="h2">
                   過去・現在・未来の<br />
                   派遣学生が繋がる<br />
                   コミュニティ
