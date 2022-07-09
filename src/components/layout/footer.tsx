@@ -4,9 +4,11 @@ import { Container, Box, Typography, Toolbar, Divider, Paper } from "@mui/materi
 import { grey } from "@mui/material/colors";
 
 import { MediaButtons, JoinCommunityButton } from "../button/mediaButtons";
+import { graphql, useStaticQuery } from "gatsby";
 
 export const Footer = () => {
 
+    const { site } = useStaticQuery<FooterQuery>(query)
     const currentYear: number = new Date().getFullYear()
     const websiteStartYear: number = 2022
 
@@ -26,7 +28,7 @@ export const Footer = () => {
                 <Toolbar disableGutters >
                     <Box flexGrow={1}>
                         <Typography >
-                            Copyright © {copyrightYears} JASSO学部学位取得型奨学生コミュニティ | All Rights Reserved
+                            Copyright © {copyrightYears} {site.siteMetadata.title} | All Rights Reserved
                         </Typography>
                     </Box>
                     <MediaButtons sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} />
@@ -38,3 +40,13 @@ export const Footer = () => {
         </Paper>
     )
 }
+
+const query = graphql`
+    query Footer {
+        site {
+            siteMetadata { 
+                title
+            }
+        }
+    }
+`

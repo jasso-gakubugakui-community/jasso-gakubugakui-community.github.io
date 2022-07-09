@@ -6,10 +6,13 @@ import { Menu as MenuIcon } from "@mui/icons-material"
 import { JoinCommunityButton } from "../button/mediaButtons";
 import { NavStack } from "../stack/navStack";
 import { PageItem } from "../../types";
+import { graphql, useStaticQuery } from "gatsby";
 
 const pages: PageItem[] = [{ name: 'About', href: "/about" }]
 
 export const Header = () => {
+    const { site } = useStaticQuery<HeaderQuery>(query)
+
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -25,9 +28,9 @@ export const Header = () => {
             <Container maxWidth='lg'>
                 <Toolbar disableGutters>
                     <Box flexGrow={1}>
-                        <Button href="/" style={{ textTransform: 'none' }} color='inherit'>
-                            JASSO学部学位取得型奨学生コミュニティ
-                        </Button>
+                        <Link href="/" style={{ textTransform: 'none' }} color='inherit' underline="none" >
+                            {site.siteMetadata.title}
+                        </Link>
                     </Box>
                     <NavStack sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {pages.map(page => (
@@ -87,3 +90,13 @@ export const Header = () => {
         </AppBar >
     )
 }
+
+const query = graphql`
+    query Header {
+        site {
+            siteMetadata { 
+                title
+            }
+        }
+    }
+`

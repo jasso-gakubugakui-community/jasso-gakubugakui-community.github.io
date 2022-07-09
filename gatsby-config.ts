@@ -5,11 +5,11 @@ require("dotenv").config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `JASSO海外学部学位取得型奨学生コミュニティ`,
-    titleTemplate: "%s | JASSO海外学部学位取得型奨学生コミュニティ",
+    title: `JASSO海外留学支援制度学部学位取得型派遣学生コミュニティ`,
+    titleTemplate: "%s | JASSO海外留学支援制度学部学位取得型派遣学生コミュニティ",
     siteUrl: `https://jasso-gakubugakui-community.github.io`,
-    description: "JASSO海外学部学位取得型奨学生コミュニティウェブサイト",
-    image: "/logo_v1.png",
+    description: "JASSO海外留学支援制度学部学位取得型派遣学生コミュニティウェブサイト",
+    image: "/images/logo_v1.png",
     twitterUsername: "@JASSO_UGGroup",
     lang: "ja",
     email: "jasso.gakubugakui.community@gmail.com"
