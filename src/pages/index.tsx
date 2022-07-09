@@ -1,13 +1,20 @@
-import { Box, Container, Grid, Typography } from "@mui/material"
+import { Box, Container, Grid, Toolbar, Typography } from "@mui/material"
 import React from "react"
 
+
 import { Layout } from "../components/layout/layout"
+import { PageSectionHeader, Paragraph } from "../components/layout/paragraph"
 import { SEO } from "../components/seo"
+import { ContactUsButton, FollowUsOnTwitterButton } from "../components/button/mediaButtons"
+import { graphql, useStaticQuery } from "gatsby"
 
 // styles
 
 // markup
 const IndexPage = () => {
+
+  const { site } = useStaticQuery<IndexPageQuery>(query)
+
   return (
     <Layout>
       <SEO />
@@ -26,9 +33,48 @@ const IndexPage = () => {
             </Grid>
           </Grid>
         </Box>
+        <Box>
+          <PageSectionHeader>About</PageSectionHeader>
+          <Paragraph>
+            {site.siteMetadata.defaultTitle}は、2022年に有志のJASSO海外留学支援制度学部学位取得型の派遣学生達によってスタートした、現派遣学生及び卒業生の縦横の繋がりを作るためのコミュニティです。
+          </Paragraph>
+          <Paragraph>
+            2022年当時、派遣学生同氏の強固な繋がりがある他奨学団体と比較して、JASSO海外留学支援制度学部学位取得型にはその様な繋がりがありませんでした。そこで我々は派遣学生主導のコミュニティを作りたいと考えました。
+          </Paragraph>
+          <Typography variant="h6" gutterBottom>
+            1. 派遣学生情報発信サイト
+          </Typography>
+          <Paragraph>
+            <b>現派遣学生及び卒業生に役立つ情報発信</b>を行います。
+          </Paragraph>
+          <Typography variant="h6" gutterBottom>
+            2. 現派遣学生及び卒業生を繋ぐコミュニティ
+          </Typography>
+          <Paragraph>
+            また2022年8月にはSlackワークスペースを立ち上げ、<b>オンラインコミュニティとしての役割</b>も果たすようになりました。
+          </Paragraph>
+        </Box>
+        <Toolbar disableGutters>
+          <Box mr={2}>
+            <ContactUsButton />
+          </Box>
+          <Box mr={2}>
+            <FollowUsOnTwitterButton />
+          </Box>
+        </Toolbar>
       </Container>
     </Layout>
   )
 }
 
 export default IndexPage
+
+const query = graphql`
+    query IndexPage {
+        site {
+            siteMetadata { 
+                title
+            }
+        }
+    }
+`
