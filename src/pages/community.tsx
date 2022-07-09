@@ -5,7 +5,7 @@ import { Box } from "@mui/system";
 
 import { Layout } from "../components/layout/layout"
 import { SEO } from "../components/seo";
-import { Paragraph, PageSectionHeader } from "../components/layout/paragraph";
+import { Paragraph, PageSectionHeading } from "../components/layout/paragraph";
 import { PageNav } from "../components/navigation/pageNav";
 import { RegistrationButton } from "../components/button/mediaButtons";
 
@@ -20,7 +20,7 @@ const CommunityPage = () => {
             <Container maxWidth='lg' sx={{ marginBottom: 2 }}>
                 <PageNav pageName="Community" />
                 <Box>
-                    <PageSectionHeader>{site.siteMetadata.defaultTitle} Slack とは？</PageSectionHeader>
+                    <PageSectionHeading>{site.siteMetadata.defaultTitle} Slack とは？</PageSectionHeading>
                     <Paragraph>
                         <ul>
                             <li>
@@ -36,7 +36,7 @@ const CommunityPage = () => {
                         をオンラインで繋ぐSlackコミュニティです。2022年8月に運営を開始しました。
                     </Paragraph>
                     <RegistrationButton />
-                    <PageSectionHeader>参加資格</PageSectionHeader>
+                    <PageSectionHeading>参加資格</PageSectionHeading>
                     <Paragraph>
                         当コミュニティはソーシャルメディア的な側面もあるため、参加者の保護、トラブル防止などの観点から、以下の5点を満たす方のみの登録を受け付けています。
                         <ol>
@@ -49,7 +49,7 @@ const CommunityPage = () => {
                         以上を全て満たし、JASSO海外学部学位取得型派遣学生 Slack Workplaceへの参加をご希望される方は以下のボタンからフォームへのご記入をお願いします。登録していただいたメールアドレスにコミュニティから招待メールを送らせていただきます。ご不明な点がありましたら、メールにて遠慮なくお問い合わせください。派遣学生の皆様のご参加をお待ちしております。
                     </Paragraph>
                     <RegistrationButton />
-                    <PageSectionHeader>Community Guideline</PageSectionHeader>
+                    <PageSectionHeading>Community Guideline</PageSectionHeading>
                     <Paragraph>
                         JASSO学部学位取得型派遣学生コミュニティは、2022年に有志のJASSO学部学位取得型支援制度の派遣学生達によってスタートした、現派遣学生及び卒業生の縦横の繋がりを作るためのコミュニティです。
                     </Paragraph>
