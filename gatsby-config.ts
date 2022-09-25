@@ -1,9 +1,18 @@
 import type { GatsbyConfig } from "gatsby";
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: ` jasso-gakubugakui-community.github.io`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `JASSO海外留学支援制度学部学位取得型コミュニティ`,
+    titleTemplate: "%s | JASSO海外留学支援制度学部学位取得型派遣学生コミュニティ",
+    siteUrl: `https://jasso-gakubugakui-community.github.io`,
+    description: "JASSO海外留学支援制度学部学位取得型コミュニティウェブサイト",
+    image: "/images/logo_v2.png",
+    twitterUsername: "@JASSO_UGGroup",
+    lang: "ja",
+    email: "jasso.gakubugakui.community@gmail.com"
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -12,18 +21,18 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "",
-      "spaceId": ""
+      "accessToken": process.env.ACCESS_TOKEN,
+      "spaceId": process.env.SPACE_ID
     }
   }, "gatsby-plugin-postcss", {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
-      "trackingId": ""
+      "trackingId": process.env.TRACKING_ID
     }
   }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/logo_v1.png"
     }
   }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
@@ -39,7 +48,8 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  }]
+  },
+    `gatsby-plugin-material-ui`,]
 };
 
 export default config;
