@@ -1,0 +1,57 @@
+import React from "react";
+
+import { Box, Typography } from "@mui/material";
+
+export const P = (props: { children: React.ReactNode }) => {
+    return (
+        <Typography variant="body1" component='p' paragraph>
+            {props.children}
+        </Typography>
+    )
+}
+
+export const SectionHeading = (props: { children: React.ReactNode }) => {
+    return (
+        <Box>
+            <Typography variant="h4"
+                gutterBottom
+                color='primary'
+                fontWeight="bold"
+                mt={4}
+                sx={{ display: { xs: 'none', md: 'flex' } }}>
+                {props.children}
+            </Typography>
+            <Typography variant="h5"
+                gutterBottom
+                color='primary'
+                fontWeight="bold"
+                mt={4}
+                sx={{ display: { xs: 'flex', md: 'none' } }}>
+                {props.children}
+            </Typography>
+        </Box>
+    )
+}
+
+export const SubsectionHeading = (props: { children: React.ReactNode }) => {
+    return (
+        <Box>
+            <Typography variant="h5"
+                gutterBottom
+                color='primary'
+                fontWeight="bold"
+                mt={4}
+                sx={{ display: { xs: 'none', md: 'flex' } }}>
+                {props.children}
+            </Typography>
+            <Typography variant="h6"
+                gutterBottom
+                color='primary'
+                fontWeight="bold"
+                mt={4}
+                sx={{ display: { xs: 'flex', md: 'none' } }}>
+                {props.children}
+            </Typography>
+        </Box>
+    )
+}
